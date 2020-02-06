@@ -22,24 +22,24 @@ export interface IRoute {
 // Routes
 export const routes = [
   {
-    title: 'Dashboard',
+    component: Dashboard,
+    exact: true,
     key: 'dashboard',
     path: '/dashboard',
-    exact: true,
-    component: Dashboard,
+    title: 'Dashboard',
   },
   {
-    title: 'Products',
+    component: Products,
+    exact: true,
     key: 'products',
     path: '/products',
-    exact: true,
-    component: Products,
+    title: 'Products',
   },
   {
-    title: 'Product',
+    component: Product,
+    exact: true,
     key: 'product',
     path: '/products/:id',
-    exact: true,
-    component: Product,
+    title: 'Product',
   },
 ];
