@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Routes
+/** How is IRoute not used?
+ * */
+// eslint-disable-next-line no-unused-vars
 import { routes, IRoute } from './routes';
 
 const App = () => (
@@ -9,10 +12,10 @@ const App = () => (
     <Switch>
       {routes.map((route: IRoute) => (
         <Route
+          component={route.component}
           exact={route.exact}
           key={route.key}
           path={route.path}
-          component={route.component}
         />
       ))}
     </Switch>

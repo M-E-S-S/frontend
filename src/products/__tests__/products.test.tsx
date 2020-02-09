@@ -4,5 +4,5 @@ import Products from '../Products';
 
 it('renders welcome message', () => {
   const { getByText } = render(<Products />);
-  expect(getByText('Products')).toBeInTheDocument();
+  expect(getByText('Products welcome message')).toBeInTheDocument();
 })

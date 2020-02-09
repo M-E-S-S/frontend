@@ -3,6 +3,7 @@
  *
  * https://www.pluralsight.com/guides/react-router-typescript
  */
+// eslint-disable-next-line no-unused-vars
 import { RouteComponentProps } from 'react-router-dom';
 
 // Components

@@ -4,5 +4,5 @@ import Dashboard from '../Dashboard';
 
 it('renders welcome message', () => {
   const { getByText } = render(<Dashboard />);
-  expect(getByText('Dashboard')).toBeInTheDocument();
+  expect(getByText('Dashboard welcome message')).toBeInTheDocument();
 });
