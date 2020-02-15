@@ -12,23 +12,21 @@ import Product from './product';
 
 // Interface
 export interface IRoute {
-  component: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
-  exact: boolean;
+  title: string;
   key: string;
   path: string;
-  title: string;
-  useLayout: boolean;
+  exact: boolean;
+  component: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
 }
 
 // Routes
-export const routes: IRoute[] = [
+export const routes = [
   {
     component: Dashboard,
     exact: true,
     key: 'dashboard',
     path: '/dashboard',
     title: 'Dashboard',
-    useLayout: true,
   },
   {
     component: Products,
@@ -36,7 +34,6 @@ export const routes: IRoute[] = [
     key: 'products',
     path: '/products',
     title: 'Products',
-    useLayout: true,
   },
   {
     component: Product,
@@ -44,6 +41,5 @@ export const routes: IRoute[] = [
     key: 'product',
     path: '/products/:id',
     title: 'Product',
-    useLayout: true,
   },
 ];
