@@ -5,45 +5,66 @@
  */
 import { RouteComponentProps } from 'react-router-dom';
 
+// Layout
+import {
+  PrivateLayout,
+  PublicLayout,
+} from './common/layout';
+
 // Components
 import Dashboard from './dashboard';
 import Products from './products';
 import Product from './product';
+import NotFound from './notFound';
 
 // Interface
 export interface IRoute {
   component: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
-  exact: boolean;
+  exact?: boolean;
   key: string;
-  path: string;
+  layout: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
+  path?: string;
   title: string;
-  useLayout: boolean;
+}
+
+export interface IRoutes {
+  dashboard: IRoute;
+  products: IRoute;
+  product: IRoute;
+  notFound: IRoute;
 }
 
 // Routes
-export const routes: IRoute[] = [
-  {
+export const routes: IRoutes = {
+  dashboard: {
     component: Dashboard,
     exact: true,
     key: 'dashboard',
+    layout: PrivateLayout,
     path: '/dashboard',
     title: 'Dashboard',
-    useLayout: true,
   },
-  {
+  products: {
     component: Products,
     exact: true,
     key: 'products',
+    layout: PrivateLayout,
     path: '/products',
     title: 'Products',
-    useLayout: true,
   },
-  {
+  product: {
     component: Product,
     exact: true,
     key: 'product',
+    layout: PrivateLayout,
     path: '/products/:id',
     title: 'Product',
-    useLayout: true,
   },
-];
+  notFound: {
+    component: NotFound,
+    key: 'notfound',
+    layout: PublicLayout,
+    path: '*',
+    title: 'NotFound',
+  },
+};
