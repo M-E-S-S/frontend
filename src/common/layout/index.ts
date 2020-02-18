@@ -1,2 +1,2 @@
-export { default as PrivateLayout } from './PrivateLayout';
-export { default as PublicLayout } from './PublicLayout';
+export { default as LayoutPrivate } from './LayoutPrivate';
+export { default as LayoutPublic } from './LayoutPublic';

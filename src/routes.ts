@@ -7,8 +7,8 @@ import { RouteComponentProps } from 'react-router-dom';
 
 // Layout
 import {
-  PrivateLayout,
-  PublicLayout,
+  LayoutPrivate,
+  LayoutPublic,
 } from './common/layout';
 
 // Components
@@ -23,7 +23,7 @@ export interface IRoute {
   exact?: boolean;
   key: string;
   layout: React.ComponentType<RouteComponentProps<any>> | React.ComponentType<any>;
-  path?: string;
+  path: string;
   title: string;
 }
 
@@ -40,7 +40,7 @@ export const routes: IRoutes = {
     component: Dashboard,
     exact: true,
     key: 'dashboard',
-    layout: PrivateLayout,
+    layout: LayoutPrivate,
     path: '/dashboard',
     title: 'Dashboard',
   },
@@ -48,7 +48,7 @@ export const routes: IRoutes = {
     component: Products,
     exact: true,
     key: 'products',
-    layout: PrivateLayout,
+    layout: LayoutPrivate,
     path: '/products',
     title: 'Products',
   },
@@ -56,14 +56,14 @@ export const routes: IRoutes = {
     component: Product,
     exact: true,
     key: 'product',
-    layout: PrivateLayout,
+    layout: LayoutPrivate,
     path: '/products/:id',
     title: 'Product',
   },
   notFound: {
     component: NotFound,
     key: 'notfound',
-    layout: PublicLayout,
+    layout: LayoutPublic,
     path: '*',
     title: 'NotFound',
   },
