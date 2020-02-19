@@ -17,7 +17,6 @@ export default {
       lg: 62, // 992px
       xl: 75, // 1200px
     },
-
     columns: 12,
     containerWidth: {
       xs: 0,
