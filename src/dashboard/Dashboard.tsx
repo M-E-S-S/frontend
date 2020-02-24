@@ -1,7 +1,14 @@
 import React from 'react';
 
+// Components
+import { Container, Row, Column } from '../common/grid';
+
 const Dashboard = () => (
-  <div>Dashboard</div>
+  <Container>
+    <Row>
+      <Column>Dashboard</Column>
+    </Row>
+  </Container>
 );
 
 export default Dashboard;
