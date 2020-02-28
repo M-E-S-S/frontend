@@ -32,7 +32,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-coverage": "npm test -- --coverage --watchAll=false",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "styleguidist": "npx styleguidist server"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -58,6 +59,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "eslint-plugin-sort-keys-fix": "^1.1.0"
+    "eslint-plugin-sort-keys-fix": "^1.1.0",
+    "react-styleguidist": "^10.6.2"
   }
 }
