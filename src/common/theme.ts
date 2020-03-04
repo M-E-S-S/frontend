@@ -83,8 +83,29 @@ export const BUTTON = {
   },
 };
 
+export const INPUT = {
+  border: {
+    radius: BORDER.radius,
+    width: BORDER.width,
+  },
+  color: {
+    primary: COLORS.blue,
+    secondary: COLORS.yellow,
+  },
+  font: {
+    lineHeight: FONT.lineHeight,
+    size: FONT.size,
+  },
+  padding: {
+    sm: [0.375, 1],
+    md: [0.5, 1.25],
+    lg: [0.625, 1.5],
+  },
+};
+
 export default {
   BUTTON,
+  INPUT,
   COLORS,
   FONT,
   GRID,
